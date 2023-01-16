@@ -17,6 +17,13 @@ It can be seen that the path (in blue) changes dynamically as the agent moves th
 The black points tracking the obstacles are the nearest obstacle to the vehicle, used as a heuristic for [speed control](#longitudinal-control).
 
 ### Dynamic Environment (4 agents)
+The video can be seen on [YouTube](https://youtu.be/c9XFDGZ9H6w).
+
+It can be seen that when agents detect that other agents (modelled as circles centered about the predicted center of other agents) would block their trajectories, they stop. So long as one agent has a viable path to the goal, no deconfliction is needed.
+
+To save computation, agents only consider other agents in their front 180 degrees. You can observe this as dynamic obstacles appearing and disappearing as the agents turn around.
+
+For more robust matching, agents could be programmed to detect blind corners (eg. around obstacles). This would allow for higher safe top speeds, or lower overall control efforts.
 
 ## Implementation Details
 ### Sampling Points
