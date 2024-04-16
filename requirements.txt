@@ -1,3 +1,7 @@
 shapely
 scipy
 numpy
+matplotlib
+datetime
+commonroad-all
+dg_commons
